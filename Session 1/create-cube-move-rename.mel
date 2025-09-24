@@ -1,0 +1,7 @@
+string $testCube[] = `polyCube -w 2 -h 3 -d 1 -sx 5 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1 -n "MyCube"`;
+
+select $testCube;
+
+move 3 3 10;
+
+rename $testCube[0] "TheCube";
