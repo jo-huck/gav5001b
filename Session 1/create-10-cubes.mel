@@ -1,0 +1,11 @@
+string $baseCube[] = `polyCube -h 2 -w 2 -sx 3 -sy 3`;
+select $baseCube;
+int $cx = 1;
+int $cy = 1;
+int $cz = 1;
+
+for ($i = 0; $i < 10; $i++) {
+    $baseCube = `duplicate -rr`;
+    select $baseCube;
+    move -r $cx $cy $cz;
+}
