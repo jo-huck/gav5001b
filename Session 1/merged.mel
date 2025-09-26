@@ -1,0 +1,18 @@
+string $sel[] = `ls -sl`;
+
+int $num = 0;
+
+for ($each in $sel) {
+    select $each;
+    rotate -r -os -fo 0 0 45;
+    move -r 0 1 1;
+
+    if ($num != 0) {
+      connectAttr ($sel[0] + ".rotateX") ($each + ".rotateX");
+      connectAttr ($sel[0] + ".rotateY") ($each + ".rotateY");
+      connectAttr ($sel[0] + ".rotateZ") ($each + ".rotateZ");
+    }
+    rename $each ("SelectedObject_" + $num);
+
+    $num++;
+}
