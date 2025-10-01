@@ -1,0 +1,11 @@
+string $stuff[] = {"Pete", "Rob", "Jason"};
+print $stuff[1];
+
+string $someCylinder[] = `polyCylinder -r 10 -n "MyCylinder"`;
+move 0 1 0 -r $someCylinder[0];
+
+int $one = 2;
+int $calc = 5 * $one;
+
+string $se1[] = `ls -sl`;
+move 0 2 0 $sel;

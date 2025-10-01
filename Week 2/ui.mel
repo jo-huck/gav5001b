@@ -1,0 +1,7 @@
+
+string $window = `window -t "Hello World"`;
+columnLayout -adjustableColumn true;
+text -label "Hey, how are you?";
+button -label "Do something" -command ("deleteUI -window " + $window);
+setParent ..;
+showWindow $window;
